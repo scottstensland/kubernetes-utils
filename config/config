@@ -1,0 +1,27 @@
+
+
+export PROJECT_ID=primacyofdirectexperience
+# export PROJECT_ID=ruptureofthemundaneplane
+# export PROJECT_ID=idi-amin-dada
+export GKE_APPNAME=nodejsapp
+export GKE_NGINX_NAME=nginxapp
+export GKE_CLUSTER=webappcluster
+export GKE_ZONE=us-east1-b
+
+
+#  https://cloud.google.com/compute/docs/machine-types
+
+# export MACHINE_TYPE="f1-micro"
+# export MACHINE_TYPE="g1-small"
+export MACHINE_TYPE="n1-standard-1"
+
+
+
+# export NUM_NODES=1  #  fit failure on node: 
+# Node didn't have enough resource:CPU, requested: 100, used: 920, capacity: 1000
+
+# export NUM_NODES=2   # runs OK for only nodejs + mongodb  ... NOT for all 3 containers
+export NUM_NODES=3    #  IMPORTANT - each container is put into a node :  nginx + nodejs + mongodb === 3 num-nodes
+
+
+
