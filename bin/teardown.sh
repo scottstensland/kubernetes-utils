@@ -28,14 +28,14 @@ echo "kubectl get services"
 # delete services running on cluster
 
 echo "https://stackoverflow.com/questions/33509194/command-to-delete-all-pods-in-all-kubernetes-namespaces"
-echo "kubectl delete services kubernetes  mongo  web nginx"
-      kubectl delete services kubernetes  mongo  web nginx
+echo "time kubectl delete services kubernetes  mongo  web nginx"
+      time kubectl delete services kubernetes  mongo  web nginx
 
 echo GKE_CLUSTER $GKE_CLUSTER
 
 # destroy running cluster
 
-echo "gcloud --quiet container --project ${PROJECT_ID} clusters delete ${GKE_CLUSTER}"
-      gcloud --quiet container --project ${PROJECT_ID} clusters delete ${GKE_CLUSTER}
+echo "time gcloud --quiet container --project ${PROJECT_ID} clusters delete ${GKE_CLUSTER}"
+      time gcloud --quiet container --project ${PROJECT_ID} clusters delete ${GKE_CLUSTER}
 
 
